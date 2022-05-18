@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joshua Smith's Digital Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+<body class="body">
+<div class="clippydiv" id="clippy">
+    <img src="icons/clippy.png"/>
+    <!-- (A) "SPEECH BOX" -->
+    <div class="speech bottom">
+        Hi! This is Josh's Web Portfolio. It is based on the Window's 95 Operating System.
+        Click an Icon or the tool bar to get started.
+        <span class="h6-button w3-display-topright">
+                <i id="exit3" class="fa fa-remove"></i>
+        </span>
+    </div>
+</div>
+<div class="imgholder" id="icon1">
+    <img src="icons/My%20Computer.ico"/>
+    <span>My Computer</span>
+</div>
+<div class="imgholder" id="icon2">
+    <img id="icon2Img" src="icons/Empty%20Recycle%20Bin.ico"/>
+    <span>Recycle Bin</span>
+</div>
+<div class="imgholder" id="icon3">
+    <img src="icons/Notepad%20document.ico"/>
+    <span>Resume.txt</span>
+</div>
+<!--Minesweeper-->
+<div id="minesweeper" class="windows-border w3-content windows-content"hidden>
+    <div>
+        <h6 class="windows-topnav" style="font-family: Microsoft Sans Serif">https://iq.opengenus.org/minesweeper-game-using-js/
+        </h6>
+        <div class="windows-border2 w3-padding">
+            <div id="box">
+                <h2>MINESWEEPER!</h2><hr><br><br>
+                <div id="field"></div>
+                <br>
+                <div id="lost" style="display: none;">
+                    <h3>You got bombed!</h3>
+                    <button id="new-game-button" type="button" onclick="reload()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Navbar -->
+    <div class="dropup" class="navbar">
+        <div class="navbar">
+            <button id="start" class="startbutton"><i class="fa fa-terminal"></i> Start</button>
+        </div>
+        <div class="dropup-content">
+            <a id="info" href="#"><i class="fa fa-info-circle w3-margin-right"></i> Information</a>
+            <a id="aboutMe" href="#"> <i class="fa fa-window-maximize w3-margin-right"></i> About Me</a>
+            <a href="mailto: joshuasmith@trentu.ca"><i class="fa fa-envelope w3-margin-right"></i> Contact Me</a>
+        </div>
+    </div>
+    <!--Resume-->
+    <div id="resume" class="windows-border w3-content windows-content" style="max-width:1400px" hidden>
+        <div>
+            <h6 class="windows-topnav" style="font-family: Microsoft Sans Serif">Resume.txt - Notepad
+                <span class="h6-button w3-display-topright">
+                <i id="exit1" class="fa fa-remove"></i>
+        </span>
+            </h6>
+            <div class="windows-border2 w3-white w3-padding" style="font-family: 'Lucida Console'">
+                <header>
+                    <div style="text-align:center"><h1 style="font-family: 'Lucida Console'">Joshua T. Smith</h1>
+                        <p>joshuasmith@trentu.ca</p>
+                        <p>Charlottetown, PEI</p>
+                    </div>
+                </header>
+                <h2 style="font-family: 'Lucida Console'" id="Education">Education</h2>
+                <ul>
+                    <li>University of Prince Edward Island - B.A. History, Hon. 2014</li>
+                    <li>Trent University - M.A. History, 2021</li>
+                    <li>Holland College - Computer Developer Analyst, 2023</li>
+                </ul>
+                <h2 style="font-family: 'Lucida Console'" id="Professional Experience">Professional Experience</h2>
+                <table>
+                    <style>
+                        table, th, td {
+                            border: 1px solid hotpink;
+                        }
+                    </style>
+                    <tr>
+                        <th scope="col" class="name">Company</th>
+                        <th>Position</th>
+                        <th>Dates</th>
+                    </tr>
+                    <tr>
+                        <td>ScreenScape Networks</td>
+                        <td>Customer Success Specialist</td>
+                        <td>2020-2021</td>
+                    </tr>
+                    <tr>
+                        <td>Norton's Jewellers</td>
+                        <td>Sales Associate</td>
+                        <td>2019-2020</td>
+                    </tr>
+                    <tr>
+                        <td>Trent University</td>
+                        <td>Teacher's Assistant</td>
+                        <td>2017-2019</td>
+                    </tr>
+                    <tr>
+                        <td>McDonald's Canada</td>
+                        <td>Crew Trainer</td>
+                        <td>2006-2017</td>
+                    </tr>
+                </table>
+                <h2 style="font-family: 'Lucida Console'" id="Activities & Volunteering">Activities & Volunteering</h2>
+                <ul>
+                    <li>PEI Taekwondo</li>
+                    <li>Youtube</li>
+                    <li>Trent Boxing Club</li>
+                </ul>
+                <h2 style="font-family: 'Lucida Console'" id="Other Groups">Other Groups</h2>
+                <ul>
+                    <li>Trent Radio, Co-Host</li>
+                    <li>Graduate Program Committee, Student Representative</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Window's Container -->
+    <div id="drag" class="windows-border w3-content windows-content" style="max-width:1400px" hidden>
+        <div>
+            <div>
+                <h6 class="windows-topnav" style="font-family: Microsoft Sans Serif">Microsoft Internet Explorer -
+                    Microsoft
+                    Internet Explorer
+                    <span class="h6-button w3-display-topright">
+                <i id="exit2" class="fa fa-remove"></i>
+        </span></h6>
+                <p contenteditable="true" class="windows-border2 w3-white">C:\WINDOWS\SYSTEM\BLANK.HTM</p>
+            </div>
+            <div class="windows-border2  w3-padding w3-theme-l4" style="max-width:1400px">
+                <!-- The Grid -->
+                <div class="w3-row">
+                    <!-- Left Column -->
+                    <div class="w3-col m3">
+                        <!-- Profile -->
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container">
+                                <h4 class="w3-center">Joshua Smith</h4>
+                                <p class="w3-center"><img src="/avatars/portrait.jpg" class="w3-circle"
+                                                          style="height:106px;width:106px"
+                                                          alt="Avatar"></p>
+                                <hr>
+                                <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+                                <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Charlottetown, PE
+                                </p>
+                                <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 4,
+                                    1992
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Interests -->
+                        <div class="w3-card w3-round w3-white w3-hide-small">
+                            <div class="w3-container">
+                                <p>Interests</p>
+                                <p>
+                                    <span class="w3-tag w3-small w3-theme-d5">Crypto</span>
+                                    <span class="w3-tag w3-small w3-theme-d4">Coding</span>
+                                    <span class="w3-tag w3-small w3-theme-d3">Gaming</span>
+                                    <span class="w3-tag w3-small w3-theme-d2">Art</span>
+                                    <span class="w3-tag w3-small w3-theme-d1">History</span>
+                                    <span class="w3-tag w3-small w3-theme">Design</span>
+                                    <span class="w3-tag w3-small w3-theme-l1">Economics</span>
+                                    <span class="w3-tag w3-small w3-theme-l2">Java</span>
+                                    <span class="w3-tag w3-small w3-theme-l3">JavaScript</span>
+                                    <span class="w3-tag w3-small w3-theme-l4">Linux</span>
+                                    <span class="w3-tag w3-small w3-theme-l5">mySQL</span>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Accordion -->
+                        <div class="w3-card w3-round">
+                            <div class="w3-white">
+                                <button onclick="myFunction('Demo1')"
+                                        class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                        class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Follow Me
+                                </button>
+                                <div id="Demo1" class="w3-hide w3-container">
+                                    <a href="https://www.linkedin.com/in/joshua-smith-631378a8/">LinkedIn</a>
+                                    <br>
+                                    <a href="https://github.com/smitsyaboi">GitHub</a>
+                                    <br>
+                                    <a href="https://www.youtube.com/c/BicMitchum">Youtube</a>
+                                </div>
+                                <button onclick="myFunction('Demo2')"
+                                        class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                        class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Publications
+                                </button>
+                                <div id="Demo2" class="w3-hide w3-container">
+                                    <a href="http://digitalcollections.trentu.ca/objects/etd-944">THE PAPER
+                                        CHASE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- End Left Column -->
+                    </div>
+
+                    <!-- Middle Column -->
+                    <div class="w3-col m7">
+
+                        <div class="w3-row-padding">
+                            <div class="w3-col m12">
+                                <div class="w3-card w3-round w3-white">
+                                    <div class="w3-container w3-padding">
+                                        <h6 class="w3-opacity">Start a post</h6>
+                                        <p contenteditable="true" class="w3-border w3-padding">Status:
+                                            Unemployed</p>
+                                        <button type="button" class="w3-button w3-theme"><i
+                                                class="fa fa-pencil"></i>
+                                             Post
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                            <img src="avatars/CEO.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                                 style="width:60px">
+                            <span class="w3-right w3-opacity">1 min</span>
+                            <h4>CEO Roman Claymoore</h4><br>
+                            <hr class="w3-clear">
+                            <p>Hey Josh! Thanks for all your hard work on the last project. Our Investors have never
+                                been happier, and my job has never been easier.
+                                The company is making record profits, and it's all thanks to you!
+                                Let's meet to discuss a pay raise...
+                            </p>
+                            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+                                    class="fa fa-thumbs-up"></i>
+                                 Like
+                            </button>
+                            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i
+                                    class="fa fa-comment"></i>
+                                 Comment
+                            </button>
+                        </div>
+
+                        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                            <img src="avatars/MR.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                                 style="height: 60px; width:60px">
+                            <span class="w3-right w3-opacity">16 min</span>
+                            <h4>Margot Robbie</h4><br>
+                            <hr class="w3-clear">
+                            <p>Heyyy do you have some time to teach me some more Java??? You're problem solving
+                                skills
+                                are amazing. I would love to see you again. ;) </p>
+                            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i
+                                    class="fa fa-thumbs-up"></i>
+                                 Like
+                            </button>
+                            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i
+                                    class="fa fa-comment"></i>
+                                 Comment
+                            </button>
+                        </div>
+
+                        <!-- End Middle Column -->
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="w3-col m2">
+                        <div class="w3-card w3-round w3-white w3-center">
+                            <div class="w3-container">
+                                <p>Patrons:</p>
+                                <img src="/eth_wallet.png" alt="Pay Me!" style="width:100%;">
+                                <p><strong>Ethereum</strong></p>
+                                <p>
+                                    <button class="w3-button w3-block w3-theme-l4">Info</button>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="w3-card w3-round w3-white w3-center">
+                            <div class="w3-container">
+                                <p>Friend Request</p>
+                                <img src="avatars/KJ.jpg" alt="Avatar" style="width:50%"><br>
+                                <span>Kendall Jenner</span>
+                                <div class="w3-row w3-opacity">
+                                    <div class="w3-half">
+                                        <button class="w3-button w3-block w3-green w3-section" title="Accept"><i
+                                                class="fa fa-check"></i></button>
+                                    </div>
+                                    <div class="w3-half">
+                                        <button class="w3-button w3-block w3-red w3-section" title="Decline"><i
+                                                class="fa fa-remove"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+                            <p>ADS</p>
+                        </div>
+                        <br>
+                        <!-- End Right Column -->
+                    </div>
+
+                    <!-- End Grid -->
+                </div>
+
+                <!-- End Page Container -->
+            </div>
+        </div>
+        <br>
+    </div>
+    <script src="interface.js"></script>
+</body>
+</html>
